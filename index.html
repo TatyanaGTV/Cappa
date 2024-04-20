@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Турагенство</title>
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link rel="stylesheet" href="node_modules/animate.css/animate.css">
+    <link rel="stylesheet"  href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/adaptiv.css">
+    <meta name="viewport" content="width=device width, initial-scale=1.0">
+
+</head>
+<body>
+<div class="top-background">
+    <header class="header">
+        <div class="container">
+            <div class="burger" id="burger">
+                <svg id="Layer_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="m464.883 64.267h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z"/>
+                    <path d="m464.883 208.867h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z"/>
+                    <path d="m464.883 353.467h-417.766c-25.98 0-47.117 21.137-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.012-21.137-47.149-47.117-47.149z"/>
+                </svg>
+            </div>
+            <div class="navigation">
+                <div class="logo">
+                    <img class="logo-i" src="images/balloon.png" alt="Шар">
+                    <img class="hide-img" src="images/balloon2.png" alt="">
+                    <img class="logo_text" src="images/Cappadocia.png" alt="">
+                </div>
+                <nav class="menu" id="menu">
+                    <div class="close">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+			c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+			c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+			L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+			c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+			c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+			c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
+	</g>
+</g>
+</svg>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#proga">Программа</a>
+                        </li>
+                        <li>
+                            <a href="#schedule">Расписание</a>
+                        </li>
+                        <li>
+                            <a href="#photos">Фото</a>
+                        </li>
+                        <li>
+                            <a href="#recomend">Отзывы</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="contacts">
+                    <div> +375 (29) 586-87-87</div>
+                    <div class="call">
+                        <div class="phone">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 width="20"
+                                 height="20" viewBox="0 0 20 20">
+                                <image id="telephone" width="20" height="20"
+                                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABq0lEQVQ4jZ3UTYjOURTH8c8YZmGSUhqbsbLFZBY2YrIx3pK85HWhWFhh4WVtI2WhRs3EFkWaQZS3ZmPyslHUTCk77I1QiujU+dft8Uwz16+eejr3/r/3nHN/53b8mVoutQOXsQBncNN/aH5+chAjOIJfuIHFGK5FBnAwYZHheMY34XH+r4IG8ALOFrDQBLbjLj7iwVyB87CqyKbUeB52oCbDAH7BojZr0cN9eFsLfIn1LfGleI4PuFQLfIjdLfFTmMZe/K4FhkXW5K/RffShpwbWAL9iKC+g0SvcxnV01gJDF7Eae4q1E1iCq+ioBcZNH08T92bsG7ZiA67lSDYK/57Ldm1pBwyNZZl3sDBjnzGAfjzLw7owiv14j1s5uv8AQyfxPTd1ZewT1uXHU3iRlxVWO58jO9JAy9emURj6aY7cYfwo1tZiW3pzuohvxD0cbQeU0CirG7uy9Nm0E1daS24Up2/GG7zLEZxNcWk/Z8qwVJQY1okxPI3XbfZEyVHRoZkyLBVP14rs66M0fVhsJZbloxz9OxZ755JhqehplB99jVEN40/me/oE/gJF8VtQz3eDbgAAAABJRU5ErkJggg=="/>
+                            </svg>
+                        </div>
+                        <a href="#" class="btn-ord">Заказать звонок</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="observe">
+        <div class="container">
+            <div class="observe-info">
+                <h1>Незабываемая поездка в Каппадокию</h1>
+                <p>Подари себе яркие впечатления, путешествуя вместе с нами</p>
+            </div>
+            <button class="button" id="btn">Смотреть программу</button>
+            <div class="observe-pict">
+                <div class="cover-image">
+                    <img src="images/ajy2.png" alt="">
+                    <button id="play">
+                        <img src="images/play-button.png" alt="">
+                    </button>
+                </div>
+                <iframe class="observe-pict-video" id="iframe" width="560" height="315"
+                        src="https://www.youtube.com/embed/j40Tu4fLz5s"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+</div>
+
+<section class="about-program">
+    <div class="side_ballon">
+        <img src="images/air-balloon-1.png" alt="">
+    </div>
+    <div class="container">
+        <div class="trust">
+            <h2>Почему нам доверяют</h2>
+            <div class="trust-items">
+                <div class="t-item wow animate__slideInLeft">
+                    <span class="count">1</span>
+                    <p>Мы обеспечиваем <strong>комфортные условия</strong> трансфера для наших клиентов</p>
+                </div>
+                <div class="t-item wow animate__slideInDown">
+                    <span class="count">2</span>
+                    <p>Наша компания уже организовала более <strong> 10.000 </strong> поездок в Каппадокию</p>
+                </div>
+                <div class="t-item wow animate__slideInRight">
+                    <span class="count">3</span>
+                    <p>Более <strong>200.000 </strong> клиентов оставили положительные отзывы </p>
+                </div>
+            </div>
+        </div>
+        <div class="program" id="proga">
+            <h2>Программа тура</h2>
+            <div class="program-items">
+                <div class="program-item animate__slideInLeft">
+                    <div class="i-info dis320">
+                        <p class="item-i wow "> 1. Шоу «Турецкая ночь»</p>
+                        <p class="item-dec ">Кружащиеся Дервиши, танцевальная постановка в стиле настоящей турецкой
+                            свадьбы, кавказские танцы с огнем и ножами, барабанное шоу и зажигательный танец живота на
+                            десерт</p>
+                    </div>
+                    <div class="hide320">
+                        <p class="item-i"> 1. Шоу «Турецкая ночь»</p>
+                        <p class="item-dec">Кружащиеся Дервиши, танцевальная постановка в стиле настоящей турецкой
+                            свадьбы<span class="p_dots">...</span><span class="read">кавказские танцы с огнем и ножами, барабанное шоу и зажигательный танец живота на десерт </span></p>
+                        <button class="read_more" type="button"> Читать далее</button>
+                    </div>
+                        <div class="item-image">
+                            <img src="images/image.png" alt="">
+                        </div>
+                    </div>
+
+                <div class="program-item wow animate__slideInRight">
+                    <div class="i-info dis320">
+                        <p class="item-i "> 2. Турецкая баня (Хамам)</p>
+                        <p class="item-dec">Одним из поистине незабываемых впечатлений от поездки в Турцию является
+                            посещение Хамама. Турецкая баня помогает человеку расслабиться и достичь
+                            умиротворения</p>
+                    </div>
+                    <div class="hide320">
+                        <p class="item-i"> 2. Турецкая баня (Хамам)</p>
+                        <p class="item-dec">Одним из поистине незабываемых впечатлений от поездки в Турцию явля<span
+                                class="p_dots"> ...</span> <span class="read">ется
+                            посещение Хамама. Турецкая баня помогает человеку расслабиться и достичь умиротворения</span>
+                        </p>
+                        <button class="read_more" type="button"> Читать далее </button>
+                    </div>
+                        <div class="item-image min">
+                            <img src="images/image1.png" alt="">
+                        </div>
+                    </div>
+
+                <div class="program-item  wow animate__slideInLeft">
+                    <div class="i-info dis320">
+                        <p class="item-i"> 3. Каньон Ихлара</p>
+                        <p class="item-dec">Остановка на смотровой площадке, откуда открывается захватывающий
+                            вид на
+                            музей Гёреме, самого известного монастырского комплекса Каппадокии, включенного в
+                            список
+                            всемирного наследия ЮНЕСКО</p>
+                    </div>
+                    <div class="hide320">
+                        <p class="item-i"> 3. Каньон Ихлара</p>
+                        <p class="item-dec">
+                            Остановка на смотровой площадке, откуда открывается захватывающий вид на
+                            музей Гёреме, <span class="p_dots"> ...</span> <span class="read">самого известного монастырского комплекса Каппадокии, включенного в список
+                            всемирного наследия ЮНЕСКО</span></p>
+                        <button class="read_more" type="button"> Читать далее</button>
+                    </div>
+                        <div class="item-image min-h">
+                            <img src="images/image2.png" alt="">
+                        </div>
+                    </div>
+
+                <div class="program-item wow animate__slideInRight">
+                    <div class="i-info dis320">
+                        <p class="item-i "> 4. Полет на воздушном шаре</p>
+                        <p class="item-dec">Путешествие на воздушном шаре — лучший способ с высоты птичьего
+                            полета насладиться великолепными видами Каппадокии, озаренной первыми лучами
+                            солнца
+                        </p>
+                    </div>
+                    <div class="hide320">
+                        <p class="item-i"> 4. Полет на воздушном шаре</p>
+                        <p class="item-dec">Путешествие на воздушном шаре — лучший способ с высоты птичьего
+                            полета <span class="p_dots"> ...</span> <span class="read">насладиться великолепными видами Каппадокии, озаренной первыми лучами солнца </span>
+                        </p>
+                        <button class="read_more" type="button"> Читать далее</button>
+                    </div>
+                        <div class="item-image  min">
+                            <img src="images/image3.png" alt="">
+                        </div>
+                    </div>
+
+                <div class="program-item wow animate__slideInLeft">
+                    <div class="i-info dis320">
+                        <p class="item-i "> 5. Долины Каппадокии</p>
+                        <p class="item-dec">Как и в других долинах Каппадокии вы здесь увидите множество
+                            пещер,
+                            уникальных христианских церквей, сохранившиеся до наших дней, ухоженные
+                            виноградники и
+                            плодовые деревья</p>
+                    </div>
+                    <div class="hide320">
+                        <p class="item-i"> 5. Долины Каппадокии</p>
+                        <p class="item-dec">Как и в других долинах Каппадокии вы здесь увидите множество
+                            пещер,
+                            уникальных христианских <span class="p_dots"> ...</span> <span class="read"> церквей, сохранившиеся до наших дней, ухоженные виноградники и
+                            плодовые деревья</span></p>
+                        <button class="read_more" type="button"> Читать далее</button>
+                    </div>
+                        <div class="item-image kap">
+                            <img src="images/image4.png" alt="">
+                        </div>
+                    </div>
+
+                <div class="program-item wow animate__slideInRight">
+                    <div class="i-info dis320">
+                        <p class="item-i "> 6. Конная прогулка</p>
+                        <p class="item-dec">Отличная возможность покататься верхом по долинам вдали
+                            от цивилизации,
+                            насладиться сказочными пейзажами и познакомиться с традиционной жизнью и
+                            культурой
+                            Каппадокии</p>
+                    </div>
+                    <div class="hide320">
+                        <p class="item-i"> 6. Конная прогулка</p>
+                        <p class="item-dec">КОтличная возможность покататься верхом по долинам вдали
+                            от цивилизации,
+                            насла <span class="p_dots"> ...</span> <span class="read">диться сказочными пейзажами и познакомиться с традиционной жизнью и культурой
+                            Каппадокии</span></p>
+                        <button class="read_more" type="button"> Читать далее</button>
+                    </div>
+                        <div class="item-image hor">
+                            <img src="images/image5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tour-in">
+                <h2>Что входит в  стоимость  тура</h2>
+                <div class="tour-in-items">
+                    <div class="tour-in-item  wow animate__flipInX">
+                        <span class="count">1</span>
+                        <p>Проживание 5 ночей в Стамбуле + 2 ночи в Каппадокии</p>
+                    </div>
+                    <div class="tour-in-item wow animate__flipInX">
+                        <span class="count">2</span>
+                        <p>Завтраки и ужины + напитки местного производства</p>
+                    </div>
+                    <div class="tour-in-item wow animate__flipInX">
+                        <span class="count">3</span>
+                        <p>Сопровождение профессиональным гидом</p>
+                    </div>
+                    <div class="tour-in-item wow animate__flipInX">
+                        <span class="count">4</span>
+                        <p>Шесть экскурсий по программе</p>
+                    </div>
+                    <div class="tour-in-item wow animate__flipInX">
+                        <span class="count">5</span>
+                        <p>Фотосессии от профессионального фотографа</p>
+                    </div>
+                    <div class="tour-in-item wow animate__flipInX">
+                        <span class="count">6</span>
+                        <p>Медицинская страховка + тест на коронавирус</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tour-in-adaptive">
+                <p><span class="str-ad">1.</span>Проживание 5 ночей в Стамбуле + 2 ночи в Каппадокии
+                </p>
+                <p><span class="str-ad">2.</span>Завтраки и ужины + напитки местного производства
+                </p>
+                <p><span class="str-ad">3.</span>Сопровождение профессиональным гидом</p>
+                <p><span class="str-ad">4.</span>Шесть экскурсий по программе</p>
+                <p><span class="str-ad">5.</span>Фотосессии от профессионального фотографа</p>
+                <p><span class="str-ad">6.</span>Медицинская страховка + тест на коронавирус</p>
+            </div>
+            <div class="tour-out">
+                <h2> В стоимость тура не входит</h2>
+                <div class="tour-out-items">
+                    <div class="tour-out-item">
+                        <span class="count-near">1</span>
+                        <p>Обед + личные расходы</p>
+                    </div>
+                    <div class="tour-out-item">
+                        <span class="count-near">2</span>
+                        <p>Чаевые водителю или гиду
+                            (по желанию)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tour-out-adaptive">
+                <p><span class="str-ad">1.</span>Обед + личные расходы</p>
+                <p><span class="str-ad">2.</span>Чаевые водителю или гиду (по желанию)</p>
+            </div>
+    </div>
+    <div class="side_ballon_2">
+        <img src="images/air-balloon-2.png" alt="">
+    </div>
+</section>
+
+<section class="tour-schedule" id="schedule">
+    <div class="container">
+        <div class="schedule">
+            <h2>Расписание туров</h2>
+            <div class="schedule-items">
+                <div class="schedule-item">
+                    <div class="date">
+                        <p> Даты тура </p>
+                        <div class="date-num">29.07.2021-04.08.2021</div>
+                    </div>
+                    <div class="place">
+                        <p>Свободно мест</p>
+                        <div class="place-num">Осталось 5 мест</div>
+                    </div>
+                    <div class="price">
+                        <p>Стоимость</p>
+                        <div class="price-num">850 EUR <span>за 1 пассажира</span></div>
+                    </div>
+                    <button class="button tour-button">Забронировать</button>
+                </div>
+                <div class="schedule-item">
+                    <div class="date">
+                        <p>Даты тура</p>
+                        <div class="date-num">04.08.2021-10.08.2021</div>
+                    </div>
+                    <div class="place">
+                        <p>Свободно мест</p>
+                        <div class="place-num">Осталось 9 мест</div>
+                    </div>
+                    <div class="price">
+                        <p>Стоимость</p>
+                        <div class="price-num">750 EUR <span>за 1 пассажира</span></div>
+                    </div>
+                    <button class="button tour-button">Забронировать</button>
+                </div>
+                <div class="schedule-item">
+                    <div class="date">
+                        <p>Даты тура</p>
+                        <div class="date-num">18.08.2021-24.08.2021</div>
+                    </div>
+                    <div class="place">
+                        <p>Свободно мест</p>
+                        <div class="place-num">Осталось 15 мест</div>
+                    </div>
+                    <div class="price">
+                        <p>Стоимость</p>
+                        <div class="price-num">650 EUR <span>за 1 пассажира</span></div>
+                    </div>
+                    <button class="button tour-button">Забронировать</button>
+                </div>
+                <div class="schedule-item">
+                    <div class="date">
+                        <p>Даты тура</p>
+                        <div class="date-num">25.08.2021-31.08.2021</div>
+                    </div>
+                    <div class="place">
+                        <p>Свободно мест</p>
+                        <div class="place-num">Осталось 5 мест</div>
+                    </div>
+                    <div class="price">
+                        <p>Стоимость</p>
+                        <div class="price-num">800 EUR <span>за 1 пассажира</span></div>
+                    </div>
+                    <button class="button tour-button">Забронировать</button>
+                </div>
+                <div class="schedule-item">
+                    <div class="date">
+                        <p>Даты тура</p>
+                        <div class="date-num">01.09.2021-07.09.2021</div>
+                    </div>
+                    <div class="place">
+                        <p>Свободно мест</p>
+                        <div class="place-num">Осталось 10 мест</div>
+                    </div>
+                    <div class="price">
+                        <p>Стоимость</p>
+                        <div class="price-num">850 EUR <span>за 1 пассажира</span></div>
+                    </div>
+                    <button class="button tour-button">Забронировать</button>
+                </div>
+            </div>
+        </div>
+        <div class="arrows-slick">
+            <button class="slick-prev" type="button">Previos</button>
+            <button class="slick-next" type="button">Next</button>
+        </div>
+    </div>
+</section>
+
+<section class="feedback" id="photos">
+    <div class="side_ballon_3">
+        <img src="images/air-balloon-3.png" alt="">
+    </div>
+    <div class="container">
+        <div class="foto">
+            <h2>Фотографии с наших экскурсий</h2>
+            <div class="fotos">
+                <div class="foto-gallery f1">
+                    <div class="img1">
+                        <a class = "card-image " href="images/foto1.png">
+                            <img src="images/foto1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img2">
+                        <a class = "card-image " href="images/foto2.png">
+                        <img src="images/foto2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img3">
+                        <a class = "card-image " href="images/foto3.png">
+                        <img src="images/foto3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img4">
+                        <a class = "card-image " href="images/foto4.png">
+                        <img src="images/foto4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img5">
+                        <a class = "card-image " href="images/foto5.png">
+                        <img src="images/foto5.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="foto-gallery f2">
+                    <div class="img1">
+                        <a class = "card-image " href="images/foto1.png">
+                            <img src="images/foto1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img2">
+                        <a class = "card-image " href="images/foto2.png">
+                            <img src="images/foto2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img3">
+                        <a class = "card-image " href="images/foto3.png">
+                            <img src="images/foto3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img4">
+                        <a class = "card-image " href="images/foto4.png">
+                            <img src="images/foto4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img5">
+                        <a class = "card-image " href="images/foto5.png">
+                            <img src="images/foto5.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="foto-gallery f3">
+                    <div class="img1">
+                        <a class = "card-image " href="images/foto1.png">
+                            <img src="images/foto1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img2">
+                        <a class = "card-image " href="images/foto2.png">
+                            <img src="images/foto2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img3">
+                        <a class = "card-image " href="images/foto3.png">
+                            <img src="images/foto3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img4">
+                        <a class = "card-image " href="images/foto4.png">
+                            <img src="images/foto4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img5">
+                        <a class = "card-image " href="images/foto5.png">
+                            <img src="images/foto5.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="foto-gallery f4">
+                    <div class="img1">
+                        <a class = "card-image " href="images/foto1.png">
+                            <img src="images/foto1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img2">
+                        <a class = "card-image " href="images/foto2.png">
+                            <img src="images/foto2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img3">
+                        <a class = "card-image " href="images/foto3.png">
+                            <img src="images/foto3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img4">
+                        <a class = "card-image " href="images/foto4.png">
+                            <img src="images/foto4.png" alt="">
+                        </a>
+                    </div>
+                    <div class="img5">
+                        <a class = "card-image " href="images/foto5.png">
+                            <img src="images/foto5.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="arrows-slick-black-2">
+                <button class="slider_2 slick-prev" type="button">Previos</button>
+                <button class="slider_2 slick-next " type="button">Next</button>
+            </div>
+        </div>
+
+        <div class="otzov" id="recomend">
+            <h2>Отзывы наших клиентов</h2>
+            <div class="otzov-items">
+                <div class="otzov-item">
+                    <div class="info">
+                        <div>
+                            <img src="images/valery.png" alt="">
+                        </div>
+                        <div class="info-name">
+                            Валерия, 25 лет
+                            <p>Минск, Беларусь </p>
+                        </div>
+                    </div>
+                    <div class="descript">
+                        Очень красивый и уютный городок. Просто гулять по городу уже масса впечатлений — дома в горах,
+                        пещеры, множество заведений, украшены по-своему и все в общем стиле. Тур оператора выбрала по
+                        совету
+                        знакомых и осталась очень довольна. Очень насыщенная и интересная программа. Обязательно буду
+                        советовать вашу компанию своим знакомым. Спасибо за незабываемые впечатления!
+                    </div>
+                    <div class="hide320-o">
+                        <p> Очень красивый и уютный городок. Просто гулять по городу уже масса впечатлений — дома в горах,
+                           пещеры, множество заведений, украшены по-своему и все в общем стиле. <span class="p_dots"> ...</span> <span class="read">Тур оператора выбрала по
+                           совету
+                           знакомых и осталась очень довольна. Очень насыщенная и интересная программа. Обязательно буду
+                           советовать вашу компанию своим знакомым. Спасибо за незабываемые впечатления!</span></p>
+                        <button class="read_more" type="button"> Читать далее</button>
+                    </div>
+                </div>
+                <div class="otzov-item">
+                    <div class="info">
+                        <div>
+                            <img src="images/oleg.png" alt="">
+                        </div>
+                        <div class="info-name">
+                            Олег, 34 года
+                            <p>Москва, Россия </p>
+                        </div>
+                    </div>
+                    <div class="descript">
+                        Спасибо за четко организованный тур и насыщенную программу! Ни разу не пожалел, что выбрал вашу
+                        компанию. Полеты на воздушном шаре действительно оказались незабываемыми. Так же спасибо за
+                        услугу
+                        профессионального фотографа, теперь эти моменты счастья останутся со мной на всю жизнь!
+                    </div>
+                    <div class="hide320-o">
+                        <p>  Спасибо за четко организованный тур и насыщенную программу! Ни разу не пожалел, что выбрал вашу
+                            компанию. Полеты на воздушном шаре действительно оказались незабываемыми. <span class="p_dots"> ...</span> <span class="read"> Так же спасибо за
+                            услугу профессионального фотографа,теперь эти моменты счастья останутся со мной на всю жизнь!</span></p>
+                        <button class="read_more" type="button"> Читать далее</button>
+                    </div>
+                </div>
+                <div class="otzov-item">
+                    <div class="info">
+                        <div>
+                            <img class="fgh" src="images/ot3.png" alt="">
+                        </div>
+                        <div class="info-name">
+                            Екатерина, 30 лет
+                            <p> Суздаль, Россия </p>
+                        </div>
+                    </div>
+                    <div class="descript">
+                        Каппадокия- место силы) В Каппадокию собралась совершенно случайно,никогда не знала про это
+                        место) Когда увидела фото в интернете,не поверила,что это реальное место,все выглядело,как-будто
+                        в сказке.
+                        Приехав на место,убедилась,что это действительно сказка, в реальной жизни)
+                    </div>
+                    <div class="hide320-o">
+                        <p>  Каппадокия- место силы) В Каппадокию собралась совершенно случайно,никогда не знала про это
+                            место) Когда увидела фото в интернете,не поверила,что это реальное место,все выглядело,как-будто
+                            в сказке.
+                            <span class="p_dots"> ...</span> <span class="read">Приехав на место,убедилась,что это действительно сказка, в реальной жизни)</span></p>
+                        <button class="read_more" type="button"> Читать далее</button>
+                    </div>
+                </div>
+                <div class="otzov-item">
+                    <div class="info">
+                        <div>
+                            <img class="fgh" src="images/ot4.jpg" alt="">
+                        </div>
+                        <div class="info-name">
+                            Иван, 37 лет
+                            <p> Москва, Россия</p>
+                        </div>
+                    </div>
+                    <div class="descript">
+                        Необычные скалы похожих на эти я не видел нигде! Причудливые фигуры, дома в скалах, ходы,
+                        прекрасный вид и незабываемые впечатление и самое главное все это в пешей доступности!
+                        Спасибо за четко организованный тур и насыщенную программу!
+                    </div>
+                    <div class="hide320-o">
+                        <p>  Необычные скалы похожих на эти я не видел нигде! Причудливые фигуры, дома в скалах, ходы,
+                            прекрасный вид и незабываемые впечатление и самое главное все это в пешей доступности!<span class="p_dots"> ...</span> <span class="read">Спасибо за четко организованный тур и насыщенную программу!
+                           </span></p>
+                        <button class="read_more" type="button"> Читать далее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="arrows-slick-black">
+                <button class="slider slick-prev" type="button">Previos</button>
+                <button class="slider slick-next" type="button">Next</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="bottom-background">
+    <section class="travel">
+        <div class="container">
+            <div class="travel-form wow animate__zoomIn">
+                <h2>Отправляйтесь в свое путешествие
+                    вместе с нами!</h2>
+                <form action="" class="travel-order" id="form">
+                    <p>Заполните форму заявки и ожидайте звонка
+                        нашего менеджера в течении 10 минут</p>
+                    <input type="text" class="red1" id="name" placeholder="Ваше имя">
+                    <div class="error-input">Введите Ваше имя</div>
+                    <input type="text" class="red2" id="phone" placeholder="Ваш телефон">
+                    <div class="error-input">Введите Ваш номер телефона</div>
+                    <button class="button order-button" id="submit">Отправить заявку</button>
+                </form>
+            </div>
+            <div class="success-form">
+                <p> "Спасибо, мы свяжемся с Вами в ближайшее время!"</p>
+            </div>
+            <div class="travel-image">
+                <img src="images/air-balloon-clip-art-26.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="logo">
+                <img class="logo-i" src="images/balloon.png" alt="Шар">
+                <img class="hide-img" src="images/balloon2.png" alt="">
+                <img class="logo_text" src="images/Cappadocia.png" alt="">
+            </div>
+            <div class="network">
+                <p>Мы в соц. сетях</p>
+                <div class="networks">
+                    <div class="net" >
+                        <div>
+                            <svg id="vkt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 width="30"
+                                 height="17" viewBox="0 0 30 17">
+                                <image id="vk" width="30" height="17"
+                                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAARCAYAAADKZhx3AAAC9ElEQVRIiX2VWYhOYRjHf++MJSNESQrZssQFmgujFEKERlKGRNmaTKZw4YIGQ6QYZJQsubHkYlKSmRuUbRDZZb0wsi81ynaWOXq++Z/x+sY3/zo973nOe57/8z7b65LH/dYC9hSQoomfxO4QERVJ5CACQred0K1IQvIJnL2TZCQQuHpCV5wEBKYnyujHJJE7SMxgYgdxxnYCPARKjPg30B647xH3J3bdiJieRK6OiAJC9z1DFvKCQOtm4n4Erjuhm5wEnBdxB0KeJJEbQMwjYheJuC/QAyjPAz4ADpgJjNKzRi6k8gdwRuuL3r5Rnr4Pf7EUGABcAkZqXyHwWTvuGnGtXkq8H48B74EpwAjpltMc9AVAHq3xQ5ruwGat13u7yoEhQD1w2Qwc1YdSz2AAVGu9SfKjnOkMdP0PcSi5A+gJnAKuSDcQ2EpzpssQ0XXgBjBIp0lhxF+AucBY6eL/EPqYo8h8BVZJ3w44DnQCqoA7eCfc5MkOWjcCFVofBjrmIEskC73oLQM+ab1Fjj/w7LUQ1wFXderVntEDwDXleVcO4kbJ9UrBRuC0dFYj64BfiuavbGIU+1g/DpOuCZivaixTO2Tjgk79TeGt9L5Xq2NK1b8t8InvAduUi5OShgZ5/kb7G7xTonbqpaeaf5GmYXi2t9ltUamQW98dkbeGuwp3MVDkGUxhbTIR6JKlXyQnLdw7PXutiCNV8WuFeJ+3uVGne5v1z0K1zTn9t9L7dhMYr1TZWN6bixhvcKR5PdpGRRvGSV7Vvv1qn7Q7rJonyZ7VwIZcxIanMvgKWKxpMzrH3vRy2aOWeqkKrvG+Gfk0TTdrr6m5iA3PZahWpLeAE8AE7zQ+LE2PVAMPNfvPenm/DSzRusqmSluw8MwA5qniLe/2mOeWT+tLG4eGdFbb4DDnLOdWcM+Ad1nRHWrXYmti6167QyPw7uM8Qjc9CZlF4IoIXe8kyFx/7whcDaGrSAKavPu4axK53cTMJnb53rD9CWz7A7Lj80nyPYyTAAAAAElFTkSuQmCC"/>
+                            </svg>
+                        </div>
+                        <div class="hide-svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="23" viewBox="0 0 30 23">
+                                <image id="vk" width="30" height="23" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAXCAYAAAAcP/9qAAADf0lEQVRIiZWWa4iWVRDHfyOGLkaaqSSEEnmLpVz1Q5miIYofUkwkxVIxWNFIKMhSsTQveMNE7IK3LJFQ1w9SIHYx8IIiC4KgtikbUaldKAN117ysj8y7//M2PD676rw8zJyZec9/zpxzZo41rXv+IWAC0JEy2VVgN9hFMCmtm2EvkdkDGqcvAzsIdoLM5F22DQcG/D9HiY751xb4ChjOnfQ6MBC4Kcu3QP8CP6cGoCfwT9BVA5sLfG8BQxx4qAYng/Fx4CngBeBL4MEAeha4Gnx7AA8ryO+k83mXSK4Drkt+DHgEeLaNonQ+AqjSt1SOk8WvAMcl7wp+VcqY06MhGA+4O3AGqAy+Z2Svd8BTGgwOf9wBZMAYoEK6+eIvt5DuLMizxTcGvWfkOeAS8L0D75PhxfDH88ARoIPAnfYDl4EngHYFwFfEBwEjtR2fB/tC8U/d5sB7pRinvYmrdpoVVnRRcgUt0yJZNgH/Sh6g+W8AH6C9rVO6u4bVJeBG7X1lK0CR/HaMBf4DVgV9krcqmyVgpy3iM4OzR/uF5HfuAdTTv17yx8Dvkv2gjVIwy5JzAt6uIz8a6B0mWw00AVNbWXW6WouBp4EL4Sr51q2RvBY4lwf2vdupcjMnTFoPbJP+E3IlKAfcV7xaJxedj37AX7nUl4EJhld1chMt0ETDVCzydFDjG9qqfcH+hvjbIZg7gH8AagCvxcuD/g9gRhg36lol8so2RCvelAuqs/jf+Wjb5MYLFPlE3cVENUpbne5jU+5/R4GfC7Lxmbgf0l7R4N0p77wCbF7zRFYFphRZ6ecdKI31VYAtBetKZlutlPqyrV3zVtgzwGmv0anQ5FeM6vRPahQbCux5mg68BUwDDgDvBvs1YLyuVmWcrwi4UfW4SU1i3l2A+4n/FgJ/L9gddJLa6yv6CoGdasOJXKHe3BKlB8T8UC6XJADRYeB9yV5kOrcEjKrPh5I/0j1u34p/gwBTwdisVpholRbkJ31ua8Bo1Sslvwb8qALRscA3zTVXjccbyR6gm/Se6jclTys61aFApdPJFLANhnXQqb4J9ivYZbBeuB4bQ2Z79ebqBFYL5uX3TzAvoykwf8lk9wrsvLthi8hsSnOfLl8Z/+pLVy+zhvDYexLsENCloNJ+fT/A6R57CoeB9QEzsHNg34A1FLwy/fkzAayLJvGe/gtQcxs9b8jtKf2IDwAAAABJRU5ErkJggg=="/>
+                            </svg>
+                        </div>
+                        <div class="net-name">Vkontakte</div>
+                    </div>
+                    <div class="net" >
+                        <div>
+                            <svg id="ig" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 width="26"
+                                 height="23" viewBox="0 0 26 23">
+                                <image id="instagram" width="26" height="23"
+                                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAXCAYAAAAV1F8QAAACSUlEQVRIib3WTYiNURgH8N97R7IYRhMbxOxkiLUFmcXYokyxQIpCPjZWIolsRklJykdhIzbIyqiZspCtzJSFGgrJmEws5H7p3Hmurmnu29whT53ufc/5P///Oed5nnNOVh1ZrsFWqjiklG2ulnQpZvMUM4pUf2ZEm/zvz+8iitkPxWy0WvJEObui7HWdek78FnAGJ/AND3ETn7Vmi7EGe3AY53EalbrQpRi4geP42qJAo6VJL8AFnMRCHElCvSFyFQf/QmAjbmEZ7mGvyQ1N3I9SjB5jA5biuwpKmWqptudaiNELxWypYvaoWnJQOdum7Cne41la0XoM1ESaWzt2oAddgRrFIO6G70esjUkn+xT9ibsn7WcnPuSI7ArSaxHod9FWR99oYPbF9xvsxPPwT9yd9WSoNBFJwTwbM097PTJlvBuXcRuncHQajhp3IWclm0LkfiTMVBHR1xuYs+EzreUJpdWMYz/KObhyYMbDpyWhuRH4B5jIEanbRGB7wnfGQoti7O0MROr2NnwWtSI0FkFc0YLQivAZa0XoZ2TaVnTMQKQjsIPhO2OhZOeixlJttOXg2gLTGT7TWp7QUNRGX1R39zSY7hjrC+xQM7LGa6LZqlKQL2IYLxvqaRXW4Qt2407eYgqR/0tyVnYnzrdUK6+wPNpw9HXliAju8X95ev/G13zLWSrl9vrpXYhLL11U/Tmzmq31B/elQgQzHYwHcD1uxL+1xJG4EmfiHqgnw7G4vtObYXu8GVI8Zvtm2IL5kUzpzeD/vILwCyYf5wpZAT6XAAAAAElFTkSuQmCC"/>
+                            </svg>
+                        </div>
+                        <div class="hide-svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26">
+                                <image id="instagram" width="26" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAACWElEQVRIib2WMWhTURSGvxvSwUCdomugkKEitNRFcCld2oIVFBG3gi5uTqJTU506iU5OFtycFMnQuqhjXUq76FAIdDTN0goBaWvKn/zBx/O9vDwi/vByw3vn/v8995x7zwmnL2aJoAzhIbAEoQqhBIGg7x39pjydYKvQBvYg1CG8BFp96qjQTeANhHHgO4RtCK2cQmVgBsIkhJ/AMvBe04sRkXdAA7gBfGE0aPWvzXlLYoXedsmTrsjVEUTOAY+BV8BvczXMXZZHism4PTkYwY/nwAPgFLgPXPb4WRqFXuAVk6E9uegnjmvAN+A2MAZcMae4lyRUBbYzyKeBt8Ah8MPPod9N20aklxz8X8BXvxd3VVtXiqZhDEqlFaAGnAAfgV2bTDnQd4CnwKNeajPhBTRsJ+5SMUWgD4msAp+Ae8B+7HsFWLcNFkxEIWO7ahZZSBDB7xZsU4ts418YJPTE2yVPjgfYHdvmxHNyCy06JkmexLFv28W8Qkrf85HAD4Ndz0lK/YEe/VOkCTWBI6fwsJjynGZejzaAeadwFiq23UizGyS05tt93VdKGsZsU/Sc3EI7PoBzwGaKZxV/m7PtThpZ1s3wzGPN10v8Cpo3x2rENlWo7ZqUhI5X+sGHUefkuu2OXNjWBnli7nbRK53J8ExEd/2/f04SsysB4t5TjOrApMvvMGjmEJk1d13NSdlX+kGv/AZX2T/NR47mhMjcC8AWoHGi4Hqx7DqylcOzLE/EJU5xt/pZp6qoIqZGQjVe5VeVMa0gpsHtVne71G51O6Cuj/+lgQTOAB6Pk98cPhxQAAAAAElFTkSuQmCC"/>
+                            </svg>
+                        </div>
+                        <div class="net-name">Instagram</div>
+                    </div>
+                    <div class="net" >
+                        <div>
+                            <svg id="fb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 width="26"
+                                 height="23" viewBox="0 0 26 23">
+                                <image id="facebook" width="26" height="23"
+                                       xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAXCAYAAAAV1F8QAAABaUlEQVRIie2Wu0oDQRSGvwnBSEqLgBLEF7D2AmoKER/AB7ASG8Eg2AhqaaeVhVhbCfoKYiWoCIKtIoKVICKa7CaOzHoWx3U37CVr5Q8D+8+Z+b+9nIRR+mZwAtgGihh9AC2FbgGukgHaUSDj65qf3v1e7+1tK2h7icbVTfg+MAdck4+GgcMCUMoRgmSXil0IKgOVkPl7+RCesoAmgXWB3ALaqs0AA8BzVtASMA8sABch9bvgRBrQOLAIjAEvcTelAa0AaxbEZEwDvdaacjdApl1PLb8qT3luze0CjaygHuDJ8hX5LR532hQH1A+MWP7XawnUkda+TAoyIRvAifiDQN3MTwE18VXgVboyEcgPW46oHcnwVQtCjAoxQZkV94lGgU3L29ezUvc1FBYQB3QGbFl+LwT0LuuMrqQZEoMeA627E3EzHdv7z77RPygTqCl/lHnJZDfTnIKq2lEP1imoTzuqgctb5CkI6p8p72yhbuyopQAAAABJRU5ErkJggg=="/>
+                            </svg>
+                        </div>
+                        <div class="hide-svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26">
+                                <image id="facebook_2_" data-name="facebook (2)" width="26" height="26" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABxUlEQVRIie3WvWsVURAF8N8+XrQQJdgJYixEBQMSsVAiGBSLVGIhiIWFnZ2lkEIkiJUoqL2grUUQ1FoIfmChYArBRv+C+AXKUyMT58lmY3Czb0nlgXnsnXfvOTtz5+6d4sf1CdiDyxinGLKI4o/Fr4ViiW+JLRQ5q1Ba28MspjDXTZEnCIGH+KgdbMIkjuBgNyMJkQN41ZJIH3vxNDQ6v9O1GEnbIpIzuMe7GU3TdG3AYYxgffq+4Q4+5zi4h7oDvO15XMq9qOIT7pZ9nYYiV3ANb3Ea+zCGU/n/sgCaRBSkF/AAJ7AVh/Klt620qInQ2ThVOJcCj3Kfy/jQhtAo3uA9buELjpcK6nsc0DaEhrOyAhvxDo//tahpMawadSO6iqP5vCtTpzR+WRr/xBm8LhPUFQqR7Un4DPfTf68ybyTnba4SrGaPQmSi4ruR1kcc0i14PojQ/lKKZnAxr4CTpTk78yP6tbq4bjFEil5gHjuynAPHcjyfFpHc/BtB3Yim01Q2Xn6GqildhjUr7/9CAwn1Vri82kJw9zrZEk1mI9E2gjO4Z6O849BFSxQHrU671b/cbmM31uVzFf12KzI2tTYNJHO/ANi2WYuamPSSAAAAAElFTkSuQmCC"/>
+                            </svg>
+                        </div>
+                        <div class="net-name">Facebook</div>
+                    </div>
+                </div>
+            </div>
+            <div class="subscr">
+                <div class="subscr-title"> Подписка на рассылку</div>
+                <p>Подпишитесь на рассылку новостей и будьте в курсе всех наших выгодных предложений!</p>
+                <input type="email" class="red_mail" id="mail" placeholder="Введите ваш e-mail">
+                <button class="arrow" id="email">
+                    <div><i class="arrow-right"></i></div>
+                </button>
+            </div>
+            <div class="contacts">
+                <div> +375 (29) 586-87-87</div>
+                <button class="call-button btn-ord">Заказать звонок</button>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<div class="popup-container">
+    <div class="popup">
+        <div id="cross">
+            <img src="images/cross.png" alt="Cross">
+        </div>
+        <form action="" class="pop-form">
+            <input type="text" class="red1" id="pop_name" placeholder="Ваше имя">
+            <div class="error-input">Введите Ваше имя</div>
+            <input type="text" class="red2" id="pop_phone" placeholder="Ваш телефон">
+            <div class="error-input">Введите Ваш номер телефона</div>
+            <button class="button pop-button" id="pop_submit">Отправить заявку</button>
+        </form>
+        <div class="text-popup">Спасибо, мы свяжемся с Вами в ближайшее время!</div>
+    </div>
+</div>
+
+
+<script>
+    document.getElementById('burger').onclick = function () {
+        document.getElementById('menu').classList.add('open');
+    }
+
+    document.querySelectorAll('#menu *').forEach((item) => {
+        item.onclick = () => {
+            document.getElementById('menu').classList.remove('open');
+        }
+    })
+/*$('#burger').click (function () {
+    $('#menu').addClass('open');
+});
+$('.menu').each() {
+      $('#menu').removeClass('open');
+  }*/
+
+
+</script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="scripts/jquery-3.6.4.min.js"></script>
+<script src="scripts/jquery-migrate-1.4.1.min.js"></script>
+<script src="scripts/slick.min.js"></script>
+<script src="src/wow.min.js"></script>
+<script src="src/jquery.magnific-popup.min.js"></script>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
